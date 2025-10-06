@@ -8,7 +8,7 @@ const app = express();
 // Configuración CORS
 app.use(cors({
   origin: 'https://quotes-front-one.vercel.app', // tu frontend
-  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
 
