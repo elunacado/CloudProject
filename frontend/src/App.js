@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const BACKEND_URL = 'https://xaqpornqjowa.us-west-1.clawcloudrun.com';
+const BACKEND_URL = 'https://https://ebrkiusmchvc.us-west-1.clawcloudrun.com/frases';
 
 function App() {
   const [frases, setFrases] = useState([]);
