@@ -4,11 +4,13 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors({ origin: '*' }));
 
-
-// Permitir preflight requests para todos los endpoints
-app.options('*', cors());
+// Configuración CORS
+app.use(cors({
+  origin: 'https://quotes-front-one.vercel.app', // tu frontend
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
 
 app.use(express.json());
 
@@ -19,9 +21,8 @@ const db = mysql.createPool({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  connectTimeout: 30000 // 30s
+  connectTimeout: 30000
 });
-
 
 // Crear tabla si no existe
 db.query(`
@@ -50,5 +51,5 @@ app.post('/frases', (req, res) => {
 });
 
 // Servidor
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Servidor escuchando en puerto ${PORT}`));
