@@ -47,8 +47,3 @@ app.post('/frases', (req, res) => {
 // Servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor escuchando en puerto ${PORT}`));
-
-// Manejo de rutas no definidas (catch-all)
-app.all('*', (req, res) => {
-  res.status(404).json({ error: 'Ruta no encontrada' });
-});
