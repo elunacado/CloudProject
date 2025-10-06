@@ -4,7 +4,15 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://cloud-project-sigma.vercel.app', // URL de tu frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
+
+// Permitir preflight requests para todos los endpoints
+app.options('*', cors());
+
 app.use(express.json());
 
 // Conexión a MySQL
