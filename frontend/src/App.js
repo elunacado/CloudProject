@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const BACKEND_URL = 'https://xaqpornqjowa.us-west-1.clawcloudrun.com';
+
 function App() {
   const [frases, setFrases] = useState([]);
   const [texto, setTexto] = useState('');
@@ -9,17 +11,19 @@ function App() {
     fetchFrases();
   }, []);
 
-  const fetchFrases = async () => {
-    const res = await axios.get('http://localhost:5000/frases');
-    setFrases(res.data);
-  };
 
-  const agregarFrase = async () => {
-    if (!texto) return;
-    await axios.post('http://localhost:5000/frases', { texto });
-    setTexto('');
-    fetchFrases();
-  };
+const fetchFrases = async () => {
+  const res = await axios.get(`${BACKEND_URL}/frases`);
+  setFrases(res.data);
+};
+
+const agregarFrase = async () => {
+  if (!texto) return;
+  await axios.post(`${BACKEND_URL}/frases`, { texto });
+  setTexto('');
+  fetchFrases();
+};
+
 
   return (
     <div style={{ padding: 20 }}>
