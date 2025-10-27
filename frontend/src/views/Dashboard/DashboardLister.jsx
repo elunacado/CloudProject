@@ -1,5 +1,5 @@
 import Sidebar from "../../components/Sidebar/Sidebar";
-
+import ListerCard from "../../components/ListerCard/ListerCard"
 
 export default function DashboardLister() {
   const listMenu = [
@@ -14,8 +14,11 @@ export default function DashboardLister() {
       <Sidebar items={listMenu} />
 
       <main style={{ flex: 1, padding: "40px" }}>
-        <h1>Dashboard Lister</h1>
-        <p>Welcome to the lister's dashboard.</p>
+        <ListerCard 
+          room_information="Room 101"
+          date="2024-07-15"
+          time="10:00 AM - 11:00 AM"
+        />
       </main>
     </div>
   );
