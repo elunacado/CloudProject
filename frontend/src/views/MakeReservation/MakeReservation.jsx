@@ -1,7 +1,7 @@
 import Sidebar from "../../components/Sidebar/Sidebar"
 import Button from "../../components/Button/Button"
 
-export default function EditReservationView() {
+export default function MakeReservationView() {
     return(
         <div style={{ display: "flex", height: "100vh" }}>
               <Sidebar items={[{
@@ -9,7 +9,7 @@ export default function EditReservationView() {
                 }]} />
         
               <main style={{ flex: 1, padding: "40px" }}>
-                <h1>Modify Reservation</h1>
+                <h1>Make a Reservation</h1>
                 <div className="card">
                     <p>Room</p>
                     <select name="" id="">

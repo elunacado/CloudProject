@@ -14,7 +14,12 @@ export default function DashboardGuest() {
       <Sidebar items={guestMenu} />
 
       <main style={{ flex: 1, padding: "40px" }}>
-        <h1>Dashboard Guest</h1>
+        <h1>Welcome to Room Appointer</h1>
+        <Button
+          label="Make a Reservation"
+          url="/make-reservation"
+        />
+        
         <Card
           room_information="Room 101"
           date="2024-07-15"
