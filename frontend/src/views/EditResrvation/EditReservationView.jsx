@@ -1,4 +1,5 @@
 import Sidebar from "../../components/Sidebar/Sidebar"
+import Button from "../../components/Button/Button"
 import "../../components/Card/Card.css"
 
 export default function EditReservationView() {
@@ -9,7 +10,7 @@ export default function EditReservationView() {
                 }]} />
         
               <main style={{ flex: 1, padding: "40px" }}>
-                <h1>Hola Mundo</h1>
+                <h1>Modify Reservation</h1>
                 <div className="card">
                     <p>Room</p>
                     <select name="" id="">
@@ -20,8 +21,28 @@ export default function EditReservationView() {
                         <option value="">105</option>
                     </select>
                     <p>Date</p>
-                    <p>TIme</p>
+                    <input type="date" name="" id="" />
+                    <p>Time</p>
+                    <input
+                    type="time"
+                    id="appointment"
+                    name="appointment"
+                    min="06:00"
+                    max="10:00"
+                    required />
+                    <span>  -  </span>
+                    <input
+                    type="time"
+                    id="appointment"
+                    name="appointment"
+                    min="06:00"
+                    max="10:00"
+                    required />
                 </div>
+                 <Button
+                          label="Confirm"
+                          url="/dashboard-guest"
+                />
               </main>
         </div>
     )

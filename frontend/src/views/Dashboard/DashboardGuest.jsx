@@ -24,6 +24,10 @@ export default function DashboardGuest() {
           label="Edit Reservation"
           url="/edit-reservation"
         />
+        <Button
+          label="Cancel Reservation"
+          url="#"
+        />
       </main>
     </div>
   );
