@@ -11,9 +11,9 @@ export default function Sidebar({ items }) {
             <Link to={item.path} className="sidebar-link">
               {item.label}
             </Link>
-            <Link to={"/"} className="sidebar-link"> Logout </Link> 
           </li>
         ))}
+        <Link to={"/"} className="sidebar-link"> Logout </Link> 
       </ul>
     </aside>
   );

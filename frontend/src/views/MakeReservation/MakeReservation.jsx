@@ -44,7 +44,7 @@ export default function MakeReservationView() {
                     max="10:00"
                     required />
                 </div>
-                 <button onClick={goToFeedback}>Go to Feedback</button>;
+                 <button onClick={goToFeedback}>Issue reservation</button>;
               </main>
         </div>
     )
