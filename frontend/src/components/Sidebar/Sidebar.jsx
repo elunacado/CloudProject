@@ -13,6 +13,7 @@ export default function Sidebar({ items }) {
             </Link>
           </li>
         ))}
+        <Link to={"/"} className="sidebar-link"> Logout </Link> 
       </ul>
     </aside>
   );

@@ -44,7 +44,7 @@ export default function EditReservationView() {
                     max="10:00"
                     required />
                 </div>
-                 <button onClick={goToFeedback}>Go to Feedback</button>;
+                 <button onClick={goToFeedback}>Edit reservation</button>;
               </main>
         </div>
     )

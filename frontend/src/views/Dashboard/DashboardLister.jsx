@@ -4,7 +4,7 @@ import ListerCard from "../../components/ListerCard/ListerCard"
 export default function DashboardLister() {
   const listMenu = [
     {label: " 👤 Profile", path: "#"},
-    {label: " 📅 Room Management", path: "/dashboard-guest"},
+    {label: " 📅 Room Management", path: "/dashboard-lister"},
   
   ];
 
