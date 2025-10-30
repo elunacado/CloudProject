@@ -1,7 +1,13 @@
 import Sidebar from "../../components/Sidebar/Sidebar"
-import Button from "../../components/Button/Button"
+import { useNavigate } from "react-router-dom";
+
 
 export default function MakeReservationView() {
+  const navigate = useNavigate();
+
+  const goToFeedback = () => {
+    navigate("/feedback", { state: { label: "The reservation has been issued and the lister notified by it." } });
+  };
     return(
        <div style={{ display: "flex", height: "100vh" }}>
               <Sidebar items={[{
@@ -38,10 +44,7 @@ export default function MakeReservationView() {
                     max="10:00"
                     required />
                 </div>
-                 <Button
-                          label="Confirm"
-                          url="/dashboard-guest"
-                />
+                 <button onClick={goToFeedback}>Go to Feedback</button>;
               </main>
         </div>
     )
