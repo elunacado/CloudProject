@@ -8,7 +8,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://zajxxzqfhykj.us-west-1.clawcloudrun.com",
+  "https://cloud-project-fkj80xo02-elunacados-projects.vercel.app",
 ];
 
 app.use(cors({
