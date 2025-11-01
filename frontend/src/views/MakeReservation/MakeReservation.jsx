@@ -9,6 +9,9 @@ export default function MakeReservationView() {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
+
   const issueReservation = async () => {
     try {
       const response = await fetch(`${API_URL}/api/make-reservation`, {
