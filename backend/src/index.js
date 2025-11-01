@@ -2,9 +2,19 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
+
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    API_URL, // tu frontend en producción
+    "http://localhost:5173"            // para desarrollo local
+  ],
+  methods: ["GET", "POST"]
+}));
+
 app.use(express.json());
 
 app.get("/api", (req, res) => {
