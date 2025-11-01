@@ -5,15 +5,12 @@ import dotenv from "dotenv";
 const API_URL = import.meta.env.VITE_API_URL;
 
 
-dotenv.config();
-const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",             
-    "https://tu-frontend.vercel.app"      
+    API_URL,     
   ],
-  methods: ["GET", "POST", "OPTIONS"],    
-  credentials: true
+  methods: ["GET", "POST", "OPTIONS"],   
 }));
 
 app.use(express.json());
