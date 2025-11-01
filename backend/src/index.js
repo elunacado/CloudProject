@@ -9,10 +9,11 @@ dotenv.config();
 const app = express();
 app.use(cors({
   origin: [
-    API_URL, // tu frontend en producción
-    "http://localhost:5173"            // para desarrollo local
+    "http://localhost:5173",             
+    "https://tu-frontend.vercel.app"      
   ],
-  methods: ["GET", "POST"]
+  methods: ["GET", "POST", "OPTIONS"],    
+  credentials: true
 }));
 
 app.use(express.json());
