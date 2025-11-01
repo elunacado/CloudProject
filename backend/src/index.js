@@ -51,5 +51,5 @@ app.post("/api/edit-reservation", (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = 80;
 app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
