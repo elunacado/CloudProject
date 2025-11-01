@@ -8,7 +8,8 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",             
-    API_URL,     
+    API_URL,
+     "https://cloud-project-fkj80xo02-elunacados-projects.vercel.app"
   ],
   methods: ["GET", "POST", "OPTIONS"],   
 }));
