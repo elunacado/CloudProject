@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 const API_URL = process.env.VITE_API_URL;
-
+const app = express();
 
 app.use(cors({
   origin: [
